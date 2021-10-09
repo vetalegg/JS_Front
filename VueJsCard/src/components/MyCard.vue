@@ -112,6 +112,7 @@ export default {
   font-size: 14px;
   resize: vertical;
   border-radius: 5px;
+  font-family: Arial;
 }
 
 .feedback-form button {
