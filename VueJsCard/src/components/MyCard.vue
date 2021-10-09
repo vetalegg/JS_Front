@@ -81,6 +81,7 @@ export default {
   top: 0;
   position: static;
   width: 100%;
+  border-radius: .75rem 0 0 .75rem;
 }
 
 .card-media {
