@@ -16,6 +16,6 @@ export default {
 body {
   background: #efefef;
   font-family: "Source Code Pro", monospace;
-  user-select: none;
+user-select: auto;
 }
 </style>

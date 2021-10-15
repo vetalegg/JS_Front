@@ -3,9 +3,9 @@
     <div class="card-info">
       <div class="title" style="text-align: center;">Хочешь связаться со мной?</div>
       <form class="feedback-form">
-        <input type="text" autocomplete="off" placeholder="Ваше имя ">
-        <input type="text" autocomplete="off" placeholder="Ваш email">
-        <textarea autocomplete="off" style="height: 100px;" placeholder="Введите сообщение..."></textarea>
+        <input type="text" autocomplete="off" placeholder="Ваше имя " required>
+        <input type="text" autocomplete="off" placeholder="Ваш email в формате: example@example.com" required pattern=".+@.+..+" validationMessage="Введите корректный Email">
+        <textarea autocomplete="off" style="height: 100px;" placeholder="Введите сообщение..." required></textarea>
         <button type="submit">Отправить</button>
       </form>
     </div>
@@ -57,7 +57,8 @@ export default {
   font-size: 14px;
   resize: vertical;
   border-radius: 5px;
-}
+  font-family: "Arial"
+  }
 
 .feedback-form button {
   color: white;
