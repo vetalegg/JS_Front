@@ -1,13 +1,14 @@
 <template>
- <GirdContainer/>
+ <NavBar/>
+ <router-view />
 </template>
 
 <script>
-import GirdContainer from './components/GirdContainer'
+import NavBar from './components/NavBar'
 export default {
   name: 'App',
   components: {
-    GirdContainer
+    NavBar
   }
 }
 </script>
@@ -16,6 +17,6 @@ export default {
 body {
   background: #efefef;
   font-family: "Source Code Pro", monospace;
-user-select: auto;
+  user-select: auto;
 }
 </style>

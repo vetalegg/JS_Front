@@ -10,7 +10,7 @@ import MyCard from '@/components/MyCard'
 import FeedbackFormCard from '@/components/FeedbackFormCard'
 import Avatar from '@/assets/avatar.jpg'
 export default {
-  name: 'GirdContainer',
+  name: 'Home',
   data () {
     return {
       cardInfo: {
@@ -26,6 +26,7 @@ export default {
     FeedbackFormCard
   }
 }
+
 </script>
 
 <style scoped>
