@@ -2,16 +2,30 @@
   <nav>
     <div class="nav-wrapper">
       <div class="nav-links">
-        <router-link exact to="/">Главная</router-link>
-        <router-link to="/info">Информация</router-link>
+        <router-link  v-show="logged()" to="/" style="float: left;">Главная</router-link>
+        <router-link v-show="logged()" to="/info" style="float: left;">О разработчике</router-link>
+        <a v-show="logged()" @click.prevent="logout" style="cursor: pointer;float: right;">Выйти</a>
+        <router-link v-show="!logged()" style="float: right;" to="/login">Войти</router-link>
+        <router-link v-show="!logged()" style="float: right;" to="/register">Зарегистрироватся</router-link>
       </div>
     </div>
   </nav>
 </template>
 
 <script>
+import { doLogout } from '@/netClient/authService'
 export default {
-  name: 'NavBar'
+  name: 'NavBar',
+  methods: {
+    async logout () {
+      await doLogout()
+      this.$router.push('/login')
+    },
+    logged () {
+      console.log(localStorage.accessToken)
+      return !!localStorage.accessToken
+    }
+  }
 }
 </script>
 
